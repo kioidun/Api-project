@@ -51,7 +51,7 @@ function show(req, res) {
   const id = req.params.id;
 
   models.ServiceRequest
-    .findByPk(id, {include:[models.TribunalServices]})
+    .findByPk(id, {include:[models.TribunalServices,models.Tribunals]})
     .then((result) => {
         if(result){
             res.status(200).json(result);
