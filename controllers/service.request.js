@@ -71,7 +71,7 @@ function show(req, res) {
 
 function index(req, res) {
   models.ServiceRequest
-    .findAll()
+    .findAll({include:[models.TribunalServices,models.Tribunals]})
     .then((result) => {
       res.status(200).json(result);
     })
