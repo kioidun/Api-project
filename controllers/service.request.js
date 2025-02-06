@@ -50,23 +50,23 @@ function save(req, res) {
 function show(req, res) {
   const id = req.params.id;
 
-  models.ServiceRequest
-    .findByPk()
-    .then((result) => {
-        if(result){
-            res.status(200).json(result);
-        }else{
-            res.status(404).json({
-                message:"post not found"
-            })
-        }
+  // models.ServiceRequest
+  //   .findByPk()
+  //   .then((result) => {
+  //       if(result){
+  //           res.status(200).json(result);
+  //       }else{
+  //           res.status(404).json({
+  //               message:"post not found"
+  //           })
+  //       }
      
-    })
-    .catch((error) => {
-      res.status(500).json({
-        message: "something went wrong",
-      });
-    });
+  //   })
+  //   .catch((error) => {
+  //     res.status(500).json({
+  //       message: "something went wrong",
+  //     });
+  //   });
 }
 
 function index(req, res) {
