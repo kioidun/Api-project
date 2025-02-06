@@ -4,8 +4,8 @@ const servicerequest = require('./../controllers/service.request')
 const router = express.Router()
 
 router.post('/',servicerequest.save)
- router.get('/',servicerequest.show)
- router.get('/',servicerequest.index)
+//  router.get('/',servicerequest.show)
+//  router.get('/',servicerequest.index)
  router.patch('/:id',servicerequest.update)
  router.delete('/:id',servicerequest.destroy)
 
